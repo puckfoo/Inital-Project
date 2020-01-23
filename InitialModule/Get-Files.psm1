@@ -1,5 +1,5 @@
 # Implement your module commands in this script.
-$PSScriptRoot = "C:\Git\Modules\Modules\NewModules"
+$PSScriptRoot = "C:\Git\Inital-Project\InitialModule"
 #region LoadFunctions
 $PublicFunctions = @( Get-ChildItem -Path "$PSScriptRoot/Public/*.ps1" -ErrorAction SilentlyContinue )
 $PrivateFunctions = @( Get-ChildItem -Path "$PSScriptRoot/Private/*.ps1" -ErrorAction SilentlyContinue )
