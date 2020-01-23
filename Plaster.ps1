@@ -14,6 +14,8 @@ $defaultTemplate.TemplatePath
 
 Invoke-Plaster -TemplatePath $defaultTemplate.TemplatePath -DestinationPath $destinationPath
 
+Remove-Module -Name Get-Files
+
 Import-Module .\InitialModule\Get-Files.psd1
 Get-Module -Name Get-Files
 Get-Command -Module Get-Files
