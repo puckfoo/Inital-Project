@@ -1,8 +1,13 @@
 Function Request-Files {
     [CmdletBinding()]
     param(
-        [string]$FileName
+        [string]$FileName,
+        [string]$Path
     )
-    Set-Location "C:\"
-    Get-ChildItem -Name $file -File 
+    Get-ChildItem -Path $Path -File -Force | where {$_.Name -like "*$FileName*"}
 }
+
+
+
+
+ #Get-WMIObject Win32_LogicalDisk -filter “DriveType = 3” | Select-Object DeviceID | ForEach-Object {Get-Childitem ($_.DeviceID + “\”) $FileName -recurse}
